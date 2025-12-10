@@ -34,20 +34,22 @@ pipeline {
     }
     
     post {
-        always {
-            echo "======always======"
-        }
         success {
-            mail to : 'jasserhav@gmail.com',
-                subject: "Jenkins : Build Successful ! "
-                body: "Good news ! Your build succeeded !"
-            echo "=====pipeline executed successfully ====="
+            mail(
+                to: 'jasserhav@gmail.com',
+                subject: "Jenkins: Build Successful!",
+                body: "Good news! Your build succeeded!"
+            )
+            echo "=====Pipeline executed successfully====="
         }
         failure {
-             mail to: 'jasserhav@gmail.com',
-                 subject: "Jenkins: Build Failed",
-                 body: "Oops! Your build failed. Check Jenkins console for details."
-            echo "======pipeline execution failed======"
+            mail(
+                to: 'jasserhav@gmail.com',
+                subject: "Jenkins: Build Failed",
+                body: "Oops! Your build failed. Check Jenkins console for details."
+            )
+            echo "======Pipeline execution failed======"
         }
     }
+
 }
