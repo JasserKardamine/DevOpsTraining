@@ -4,11 +4,7 @@ pipeline {
     triggers {
         cron('H/5 * * * *')  // Toutes les 5 minutes
     }
-    
-    tools {
-        jdk 'JAVA_HOME'
-        maven 'maven3'
-    }
+
     
     options {
         timeout(time: 1, unit: 'HOURS')
