@@ -38,9 +38,15 @@ pipeline {
             echo "======always======"
         }
         success {
+            mail to : 'jasserhav@gmail.com',
+                subject: "Jenkins : Build Successful ! "
+                body: "Good news ! Your build succeeded !"
             echo "=====pipeline executed successfully ====="
         }
         failure {
+             mail to: 'jasserhav@gmail.com',
+                 subject: "Jenkins: Build Failed",
+                 body: "Oops! Your build failed. Check Jenkins console for details."
             echo "======pipeline execution failed======"
         }
     }
