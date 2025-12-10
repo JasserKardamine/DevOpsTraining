@@ -41,7 +41,7 @@ pipeline {
                 body: "Good news! Your build succeeded!"
             )
             echo "=====Pipeline executed successfully====="
-            echo "===== Pipeline executed smtp config test====="
+            echo "===== Pipeline executed smtp config ====="
         }
         failure {
             mail(
