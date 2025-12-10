@@ -36,7 +36,7 @@ pipeline {
     post {
         success {
             mail(
-                to: 'jasserhav@gmail.com',
+                to: 'marouenemahmoud@gmail.com',
                 subject: "Jenkins: Build Successful!",
                 body: "Good news! Your build succeeded!"
             )
