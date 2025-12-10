@@ -13,6 +13,7 @@ pipeline {
         stage('Code Checkout') {
             steps {
                 echo "=====Checking out code from Git====="
+                echo "=====trying the webhook trigger ====="
                 checkout scm  // Utilise checkout scm au lieu de git
             }
         }
