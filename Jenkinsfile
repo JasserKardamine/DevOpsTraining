@@ -1,11 +1,6 @@
 pipeline {
     agent any
     
-    triggers {
-        cron('H/5 * * * *')  // Toutes les 5 minutes
-    }
-
-    
     options {
         timeout(time: 1, unit: 'HOURS')
     }
