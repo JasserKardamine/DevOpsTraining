@@ -40,7 +40,7 @@ pipeline {
                 subject: "Jenkins: Build Successful!",
                 body: "Good news! Your build succeeded!"
             )
-            echo "=====Pipeline executed successfully====="
+
             echo "===== Pipeline executed smtp config ====="
         }
         failure {
