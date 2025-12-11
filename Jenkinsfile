@@ -46,6 +46,7 @@ pipeline {
                 body: "Oops! Your build failed. Check Jenkins console for details."
             )
             echo "Pipeline execution failed"
+            echo "Pipeline execution failed"
         }
     }
 
